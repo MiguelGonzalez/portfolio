@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+    db:
+        build: ./docker/build/mysql
+        ports:
+            - 3307:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: r00tP455w0rd
+            MYSQL_DATABASE: portfolio
+            MYSQL_USER: userDev
+            MYSQL_PASSWORD: d3vP455w0rd
+        volumes:
+            - './docker/data/mysql:/var/lib/mysql'
+    php:
+        build: ./docker/build/php
+        expose:
+            - '9000'
+        volumes:
+            - './site:/webapp/portfolio'
+        links:
+            - db
+    nginx:
+        build: ./docker/build/nginx
+        ports:
+            - '80:80'
+        volumes_from:
+            - php    
+        links:
+            - php
