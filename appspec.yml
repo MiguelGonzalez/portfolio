@@ -7,6 +7,10 @@ files:
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
   - source: /site/app
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
+  - source: /site/var/bootstrap.php.cache
+    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/var/
+  - source: /site/var/SymfonyRequirements.php
+    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/var/
 #  - source: /site/web/css
 #    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/css
 #  - source: /site/web/fonts
