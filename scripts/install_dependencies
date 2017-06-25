@@ -4,11 +4,11 @@ mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
 php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
 
-chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
+chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
-chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chgrp -R www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
+chgrp -R www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
 chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
