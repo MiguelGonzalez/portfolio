@@ -11,16 +11,6 @@ files:
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
   - source: /site/var/SymfonyRequirements.php
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/var/
-#  - source: /site/web/css
-#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/css
-#  - source: /site/web/fonts
-#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/fonts
-#  - source: /site/web/images
-#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/images
-#  - source: /site/web/img
-#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/img
-#  - source: /site/web/js
-#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/js
   - source: /site/web/.htaccess
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
   - source: /site/web/app.php
@@ -34,18 +24,6 @@ files:
   - source: /site/composer.lock
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
 permissions:
-#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
-#    owner: ec2-user
-#    group: ec2-user
-#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
-#    owner: ec2-user
-#    group: ec2-user
-#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
-#    owner: ec2-user
-#    group: ec2-user
-#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/var
-#    owner: ec2-user
-#    group: ec2-user
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/composer.json
     owner: ec2-user
     group: ec2-user
@@ -53,24 +31,7 @@ permissions:
     owner: ec2-user
     group: ec2-user
 hooks:
-#  ApplicationStop:
-#    - location:
-#      timeout:
-#      runas:
-#  BeforeInstall:
-#    - location:
-#      timeout:
-#      runas:
   AfterInstall:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
-
-#  ApplicationStart:
-#    - location: scripts/clear_cache
-#      timeout: 300
-#      runas: ec2-user
-#  ValidateService:
-#    - location:
-#      timeout:
-#      runas:
