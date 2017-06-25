@@ -1,3 +1,5 @@
+HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
+
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
@@ -7,8 +9,8 @@ php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=pr
 chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
-chgrp -R www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-chgrp -R www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chgrp -R $HTTPDUSER /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
+chgrp -R $HTTPDUSER /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
 chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
