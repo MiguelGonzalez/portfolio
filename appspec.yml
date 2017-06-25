@@ -34,9 +34,9 @@ files:
   - source: /site/composer.lock
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
 permissions:
-  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
-    owner: ec2-user
-    group: ec2-user
+#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
+#    owner: ec2-user
+#    group: ec2-user
 #  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
 #    owner: ec2-user
 #    group: ec2-user
