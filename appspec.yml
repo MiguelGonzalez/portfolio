@@ -3,6 +3,8 @@
 version: 0.0
 os: linux
 files:
+  - source: /site/bin/console
+    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
   - source: /site/src
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
   - source: /site/app
@@ -32,9 +34,9 @@ files:
   - source: /site/composer.lock
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
 permissions:
-#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
-#    owner: ec2-user
-#    group: ec2-user
+  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
+    owner: ec2-user
+    group: ec2-user
 #  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
 #    owner: ec2-user
 #    group: ec2-user

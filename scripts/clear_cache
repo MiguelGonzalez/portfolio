@@ -1,1 +1,3 @@
 php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
+
+rm /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
