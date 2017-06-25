@@ -1,11 +1,3 @@
-mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
-
-HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
-sudo chmod +a "$HTTPDUSER allow delete,write,append,file_inherit,directory_inherit" /var/www/vhosts/dev.miguelgonzalezgomez.com/var
-sudo chmod +a "$(whoami) allow delete,write,append,file_inherit,directory_inherit" /var/www/vhosts/dev.miguelgonzalezgomez.com/var
-
 composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
 
 php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
