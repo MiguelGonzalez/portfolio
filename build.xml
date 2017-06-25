@@ -40,10 +40,10 @@
   <target name="lint" description="Perform syntax check of sourcecode files">
     <apply executable="php">
     <arg value="-l" />
-    <fileset dir="src">
+    <fileset dir="site">
       <include name="**/*.php" />
     </fileset>
-    <fileset dir="/src/">
+    <fileset dir="site/">
       <include name="**/*Test.php" />
     </fileset>
     </apply>
@@ -53,7 +53,7 @@
     <exec executable="phploc">
     <arg value="--log-csv" />
     <arg value="build/logs/phploc.csv" />
-    <arg path="src" />
+    <arg path="site" />
     </exec>
   </target>
 
@@ -62,7 +62,7 @@
       <arg value="--jdepend-xml=build/logs/jdepend.xml" />
       <arg value="--jdepend-chart=build/pdepend/dependencies.svg" />
       <arg value="--overview-pyramid=build/pdepend/overview-pyramid.svg" />
-      <arg path="src" />
+      <arg path="site" />
     </exec>
   </target>
 
@@ -76,7 +76,7 @@
 
   <target name="phpmd-ci" description="Perform project mess detection using PHPMD creating a log file for the continuous integration server">
     <exec executable="phpmd">
-      <arg path="src" />
+      <arg path="site" />
       <arg value="xml" />
       <arg value="build/phpmd.xml" />
       <arg value="--reportfile" />
@@ -87,7 +87,7 @@
   <target name="phpcs" description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
     <exec executable="phpcs">
       <arg value="--standard=Symfony2" />
-      <arg path="src" />
+      <arg path="site" />
     </exec>
   </target>
 
@@ -96,7 +96,7 @@
       <arg value="--report=checkstyle" />
       <arg value="--report-file=build/logs/checkstyle.xml" />
       <arg value="--standard=Symfony2" />
-      <arg path="src" />
+      <arg path="site" />
     </exec>
   </target>
 
@@ -104,7 +104,7 @@
     <exec executable="phpcpd">
       <arg value="--log-pmd" />
       <arg value="build/logs/pmd-cpd.xml" />
-      <arg path="src" />
+      <arg path="site" />
     </exec>
   </target>
 
@@ -126,7 +126,7 @@
       <arg value="--log" />
       <arg path="build/logs" />
       <arg value="--source" />
-      <arg path="src" />
+      <arg path="site" />
       <arg value="--output" />
       <arg path="build/code-browser" />
     </exec>
