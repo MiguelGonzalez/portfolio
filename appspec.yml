@@ -54,8 +54,8 @@ hooks:
 #    - location:
 #      timeout:
 #      runas:
-  AfterInstall:
-    - location: scripts/prepare_environment
+  BeforeInstall:
+    - location: scripts/install_dependencies
       timeout: 300
       runas: ec2-user
 #  ApplicationStart:
