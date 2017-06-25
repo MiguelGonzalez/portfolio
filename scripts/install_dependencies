@@ -8,9 +8,10 @@ chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
-HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
-chmod +a "www allow delete,write,append,file_inherit,directory_inherit" /var/www/vhosts/dev.miguelgonzalezgomez.com/var
-chmod +a "ec2-user allow delete,write,append,file_inherit,directory_inherit" /var/www/vhosts/dev.miguelgonzalezgomez.com/var
+HTTPDUSER=httpd
+WHOAMI=ec2-user
+sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:$WHOAMI:rwX /var/www/vhosts/dev.miguelgonzalezgomez.com/var
+sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:$WHOAMI:rwX /var/www/vhosts/dev.miguelgonzalezgomez.com/var
 
 chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
 
