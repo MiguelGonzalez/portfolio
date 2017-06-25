@@ -1,28 +1,31 @@
 HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
 
-mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
+cd /var/www/vhosts/dev.miguelgonzalezgomez.com
 
-php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
+mkdir -p var/cache
+mkdir -p var/logs
+mkdir -p var/sessions
 
-chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sesions
+cp /home/ec2-user/app-paramaters/parameters.yml app/config/parameters.yml
 
-chgrp -R $HTTPDUSER /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-chgrp -R $HTTPDUSER /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chgrp -R $HTTPDUSER /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
+composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d 
+bower install --silent
 
-chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
-chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
+bin/console cache:clear --env=prod --no-debug --no-warmup
+bin/console cache:warmup --env=prod
+bin/console assetic:dump --env=prod --no-debug
 
-chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
+chown -R ec2-user var/logs
+chown -R ec2-user var/cache
+chown -R ec2-user var/sesions
 
-cp /home/ec2-user/app-paramaters/parameters.yml /var/www/vhosts/dev.miguelgonzalezgomez.com/app/config/parameters.yml
+chgrp -R $HTTPDUSER var/logs
+chgrp -R $HTTPDUSER var/cache
+chgrp -R $HTTPDUSER var/sessions
 
-composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
+chmod -R 770 var/cache
+chmod -R 770 var/logs
+chmod -R 770 var/sessions
 
-rm /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
-rmdir /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
+rm bin/console
+rmdir bin
