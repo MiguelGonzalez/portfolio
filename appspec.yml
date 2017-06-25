@@ -66,10 +66,10 @@ hooks:
       timeout: 300
       runas: root
 
-  ApplicationStart:
-    - location: scripts/clear_cache
-      timeout: 300
-      runas: ec2-user
+#  ApplicationStart:
+#    - location: scripts/clear_cache
+#      timeout: 300
+#      runas: ec2-user
 #  ValidateService:
 #    - location:
 #      timeout:

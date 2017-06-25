@@ -2,6 +2,8 @@ mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
+php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
+
 chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
@@ -16,3 +18,6 @@ chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
 cp /home/ec2-user/app-paramaters/parameters.yml /var/www/vhosts/dev.miguelgonzalezgomez.com/app/config/parameters.yml
 
 composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
+
+rm /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console
+rmdir /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
