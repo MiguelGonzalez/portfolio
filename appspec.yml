@@ -7,16 +7,16 @@ files:
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
   - source: /site/app
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
-  - source: /site/web/css
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/css
-  - source: /site/web/fonts
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/fonts
-  - source: /site/web/images
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/images
-  - source: /site/web/img
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/img
-  - source: /site/web/js
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/js
+#  - source: /site/web/css
+#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/css
+#  - source: /site/web/fonts
+#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/fonts
+#  - source: /site/web/images
+#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/images
+#  - source: /site/web/img
+#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/img
+#  - source: /site/web/js
+#    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/js
   - source: /site/web/.htaccess
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
   - source: /site/web/app.php
