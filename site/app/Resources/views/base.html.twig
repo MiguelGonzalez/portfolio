@@ -2,12 +2,34 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}Miguel González Gómez{% endblock %}</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="Miguel González Gómez - Portfolio">
+        <meta name="author" content="Miguel González Gómez" />
+        <meta name="keywords" content="miguel,gonzalez,gomez,portfolio" />
+        
+        {% stylesheets '@vendor_css' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
+        {% stylesheets '@main_css' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% javascripts '@vendor_js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        {% javascripts '@main_js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
     </body>
 </html>

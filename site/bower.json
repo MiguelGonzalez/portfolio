@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "homepage": "https://github.com/MiguelGonzalez/portfolio",
+  "authors": [
+    "miguelgonzalezgomez@gmail.com <miguelgonzalezgomez@gmail.com>"
+  ],
+  "description": "Portfolio personal website",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7"
+  }
+}

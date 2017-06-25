@@ -67,3 +67,29 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+# Assetic Configuration
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+    assets:
+        vendor_css:
+            inputs:
+                - 'assets/vendor/bootstrap/dist/css/bootstrap.css'
+                - 'assets/vendor/bootstrap/dist/css/bootstrap-theme.css'
+        main_css:
+            inputs:
+                - 'assets/app/css/main.css'
+        vendor_js:
+            inputs:
+                - 'assets/vendor/jquery/dist/jquery.js'
+                - 'assets/vendor/angular/angular.min.js'
+        main_js:
+            inputs:
+                - 'assets/app/js/app.module.js'
+
+                - 'assets/app/js/core/core.module.js'
+                - 'assets/app/js/core/constants.js'
+                - 'assets/app/js/core/config.js'
