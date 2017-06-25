@@ -1,3 +1,7 @@
+mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
+mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
+
 composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
 
 php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
