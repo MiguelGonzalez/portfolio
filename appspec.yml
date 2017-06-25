@@ -9,14 +9,21 @@ files:
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
   - source: /site/app
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
+
   - source: /site/var/SymfonyRequirements.php
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/var/
-  - source: /site/web/.bowerrc
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
-  - source: /site/web/bower.json
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
+
+  - source: /site/.bowerrc
+    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/
+  - source: /site/bower.json
+    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/
+
+  - source: /site/web/assets/app
+    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web/assets/app
+
   - source: /site/web/.htaccess
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
+
   - source: /site/web/app.php
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
   - source: /site/web/favicon.ico
