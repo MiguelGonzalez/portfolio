@@ -32,18 +32,18 @@ files:
   - source: /site/composer.lock
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
 permissions:
-  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
-    owner: ec2-user
-    group: ec2-user
-  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
-    owner: ec2-user
-    group: ec2-user
-  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
-    owner: ec2-user
-    group: ec2-user
-  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/var
-    owner: ec2-user
-    group: ec2-user
+#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
+#    owner: ec2-user
+#    group: ec2-user
+#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
+#    owner: ec2-user
+#    group: ec2-user
+#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
+#    owner: ec2-user
+#    group: ec2-user
+#  - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/var
+#    owner: ec2-user
+#    group: ec2-user
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/composer.json
     owner: ec2-user
     group: ec2-user

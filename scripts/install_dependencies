@@ -2,12 +2,10 @@ mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
+chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
+chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
-chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
 composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
