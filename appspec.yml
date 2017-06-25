@@ -62,11 +62,12 @@ hooks:
   AfterInstall:
     - location: scripts/install_dependencies
       timeout: 300
+      runas: root
+
+  ApplicationStart:
+    - location: scripts/clear_cache
+      timeout: 300
       runas: ec2-user
-#  ApplicationStart:
-#    - location: scripts/start_application
-#      timeout: 300
-#      runas: root
 #  ValidateService:
 #    - location:
 #      timeout:

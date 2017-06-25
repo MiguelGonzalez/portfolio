@@ -2,6 +2,12 @@ mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 mkdir -p /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
-composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
+chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
 
-php /var/www/vhosts/dev.miguelgonzalezgomez.com/bin/console cache:clear --env=prod --no-debug
+chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/sessions
+
+composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
