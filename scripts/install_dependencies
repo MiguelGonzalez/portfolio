@@ -8,10 +8,8 @@ chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
-HTTPDUSER=HTTPDUSER=$(ps axo user,comm | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root | head -1 | cut -d\  -f1)
-WHOAMI=ec2-user
-sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:$WHOAMI:rwX /var/www/vhosts/dev.miguelgonzalezgomez.com/var
-sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:$WHOAMI:rwX /var/www/vhosts/dev.miguelgonzalezgomez.com/var
+chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
+chmod -R 770 /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 
 chown -R ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/bin
 
