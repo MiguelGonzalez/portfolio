@@ -8,4 +8,6 @@ chown ec2-user /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/logs
 chgrp www /var/www/vhosts/dev.miguelgonzalezgomez.com/var/cache
 
+cp /home/ec2-user/app-paramaters/parameters.yml /var/www/vhosts/dev.miguelgonzalezgomez.com/app/config/parameters.yml
+
 composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d /var/www/vhosts/dev.miguelgonzalezgomez.com/
