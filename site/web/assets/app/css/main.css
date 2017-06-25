@@ -1,0 +1,15 @@
+.txt-left {
+	text-align: left;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.txt-right {
+	text-align: right;
+}
+
+.c-pointer {
+	cursor: pointer;
+}

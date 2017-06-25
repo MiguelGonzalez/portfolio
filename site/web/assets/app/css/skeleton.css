@@ -1,0 +1,148 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 50px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.expanded {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #eee;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper #sidebar-wrapper {
+    width: 50px;
+}
+
+#wrapper.expanded #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+#wrapper #page-content-wrapper {
+    position: absolute;
+    margin-right: -50px;
+}
+
+#wrapper.expanded #page-content-wrapper {
+    margin-right: -250px;
+}
+
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav .sidebar-button {
+    margin: 5px 15px 10px;
+}
+
+.sidebar-nav li.link-item {
+    text-indent: 7px;
+    line-height: 60px;
+    font-size: 2em;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.sidebar-nav li.link-item i {
+    margin-right: 7px;
+}
+
+#wrapper.expanded .sidebar-nav li.link-item {
+    text-indent: 20px;
+}
+
+#wrapper.expanded .sidebar-nav li.link-item {
+    font-size: 1.5em;
+}
+
+.sidebar-nav li.link-item a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar-nav li.link-item a:hover {
+    text-decoration: none;
+    color: #111;
+    background: rgba(150,150,150,0.2);
+}
+
+.sidebar-nav li.link-item.selected {
+    color: #111;
+    background: rgba(150,150,150,0.4);
+}
+
+.sidebar-nav li.link-item a:active,
+.sidebar-nav li.link-item a:focus {
+    text-decoration: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 50px;
+    }
+
+    #wrapper.expanded {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapper {
+        width: 0;
+    }
+
+    #wrapper.expanded #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.expanded #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}

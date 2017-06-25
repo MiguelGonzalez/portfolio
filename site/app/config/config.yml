@@ -79,8 +79,10 @@ assetic:
             inputs:
                 - 'assets/vendor/bootstrap/dist/css/bootstrap.css'
                 - 'assets/vendor/bootstrap/dist/css/bootstrap-theme.css'
+                - 'assets/vendor/font-awesome/css/font-awesome.css'
         main_css:
             inputs:
+                - 'assets/app/css/skeleton.css'
                 - 'assets/app/css/main.css'
         vendor_js:
             inputs:
@@ -93,3 +95,6 @@ assetic:
                 - 'assets/app/js/core/core.module.js'
                 - 'assets/app/js/core/constants.js'
                 - 'assets/app/js/core/config.js'
+
+                - 'assets/app/js/sidebar/sidebar.module.js'
+                - 'assets/app/js/sidebar/sidebar.controller.js'
