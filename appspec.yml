@@ -46,7 +46,7 @@ permissions:
     owner: ssh-user
     group: ssh-user
 hooks:
-  ApplicationStop:
+#  ApplicationStop:
 #    - location:
 #      timeout:
 #      runas:
