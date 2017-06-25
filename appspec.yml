@@ -31,20 +31,20 @@ files:
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
 permissions:
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/src
-    owner: ssh-user
-    group: ssh-user
+    owner: ec2-user
+    group: ec2-user
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/app
-    owner: ssh-user
-    group: ssh-user
+    owner: ec2-user
+    group: ec2-user
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
-    owner: www-data
-    group: www-data
+    owner: ec2-user
+    group: ec2-user
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/composer.json
-    owner: ssh-user
-    group: ssh-user
+    owner: ec2-user
+    group: ec2-user
   - object: /var/www/vhosts/dev.miguelgonzalezgomez.com/composer.lock
-    owner: ssh-user
-    group: ssh-user
+    owner: ec2-user
+    group: ec2-user
 hooks:
 #  ApplicationStop:
 #    - location:
@@ -57,7 +57,7 @@ hooks:
   AfterInstall:
     - location: scripts/prepare_environment
       timeout: 300
-      runas: ssh-user
+      runas: ec2-user
 #  ApplicationStart:
 #    - location: scripts/start_application
 #      timeout: 300
