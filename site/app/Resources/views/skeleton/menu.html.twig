@@ -1,7 +1,8 @@
 <ul class="sidebar-nav">
 	<li class="sidebar-button">
-		<i class="fa fa-2x c-pointer" aria-hidden="true" data-ng-click="sidebar.expandMenu()"
-			data-ng-class="{'fa-arrow-circle-left': sidebar.expanded, 'fa-arrow-circle-right': !sidebar.expanded}"></i>
+        <a href data-ng-click="sidebar.expandMenu()">
+		  <i class="fa" aria-hidden="true"data-ng-class="{'fa-angle-double-left': sidebar.expanded, 'fa-angle-double-right': !sidebar.expanded}"></i>
+        </a>
 	</li>
 
     <li class="link-item selected">
