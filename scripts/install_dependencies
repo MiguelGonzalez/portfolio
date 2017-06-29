@@ -8,7 +8,7 @@ mkdir -p var/sessions
 
 cp /home/ec2-user/app-paramaters/parameters.yml app/config/parameters.yml
 
-composer install --no-dev --no-scripts --no-interaction --optimize-autoloader -d 
+composer install --no-dev --no-scripts --no-interaction --optimize-autoloader
 bower install --silent --allow-root
 
 bin/console cache:clear --env=prod --no-debug --no-warmup
