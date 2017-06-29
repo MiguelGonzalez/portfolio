@@ -19,6 +19,8 @@
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
 
+        <base href="/">
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body data-ng-app="app" ng-strict-di>
@@ -29,7 +31,9 @@
             <div id="page-content-wrapper">
                 <div class="container-fluid">
                     <div class="row">
-                        {% block body %}{% endblock %}
+                        {% block body %}
+                            <div data-ng-view></div>
+                        {% endblock %}
                     </div>
                 </div>
             </div>
@@ -40,6 +44,10 @@
         {% endjavascripts %}
 
         {% javascripts '@main_js' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        {% javascripts '@angular_tpl' %}
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
     </body>

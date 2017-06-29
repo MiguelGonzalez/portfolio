@@ -4,9 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03f893fec5734aacb63c1f527f13b37d",
-    "content-hash": "453890275684d636909595523a1dbfd3",
+    "hash": "6a82480c9182f6ead5f00307db02ac6f",
+    "content-hash": "9a48283b415ebac4936e2291be363ff9",
     "packages": [
+        {
+            "name": "asoc/assetic-angular-js-bundle",
+            "version": "0.1.0",
+            "target-dir": "Asoc/AsseticAngularJsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AStateOfCode/AsseticAngularJsBundle.git",
+                "reference": "0858f7990156944cd92525a1b77db4c5bd6672ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AStateOfCode/AsseticAngularJsBundle/zipball/0858f7990156944cd92525a1b77db4c5bd6672ee",
+                "reference": "0858f7990156944cd92525a1b77db4c5bd6672ee",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/assetic-bundle": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Asoc\\AsseticAngularJsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pascal Kuendig",
+                    "email": "padakuro@gmail.com"
+                }
+            ],
+            "description": "Assetic filter to output AngularJS templates for the template cache",
+            "homepage": "https://github.com/AStateOfCode/AsseticAngularJsBundle",
+            "keywords": [
+                "angular",
+                "assetic",
+                "template"
+            ],
+            "time": "2014-11-27 18:16:17"
+        },
         {
             "name": "composer/ca-bundle",
             "version": "1.0.7",
