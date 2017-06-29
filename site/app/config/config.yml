@@ -89,6 +89,7 @@ assetic:
                 - 'assets/app/css/skeleton.css'
                 - 'assets/app/css/menu.css'
                 - 'assets/app/css/helpers.css'
+                - 'assets/app/css/contact.css'
         vendor_js:
             inputs:
                 - 'assets/vendor/jquery/dist/jquery.js'

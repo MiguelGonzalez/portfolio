@@ -59,3 +59,23 @@
 .sidebar-nav li.link-item a:focus {
     text-decoration: none;
 }
+
+/*
+ * Colors 
+*/
+
+.sidebar-nav li:nth-child(2) a {
+    color: #F4F1BB;
+}
+
+.sidebar-nav li:nth-child(3) a {
+    color: #9BC1BC;
+}
+
+.sidebar-nav li:nth-child(4) a {
+    color: #9B6A6C;
+}
+
+.sidebar-nav li:nth-child(5) a{
+    color: #FFBF69;
+}

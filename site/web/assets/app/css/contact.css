@@ -1,0 +1,57 @@
+#contact .header {
+	margin-top: 25px;
+}
+
+#contact .header img {
+	-webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+#contact .header img {
+	width: 128px;
+	height: 128px;
+	margin: 16px;
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#contact .header img:hover {
+	width: 160px;
+	height: 160px;
+	margin: 0px;
+}
+
+#contact .header h1 {
+	font-size: 8em;
+	font-weight: 600;
+}
+
+@-webkit-keyframes rollIn {
+	0% { 
+	   opacity: 0.5; 
+	   -webkit-transform: translateX(-500%) rotate(-540deg); 
+	}
+	100% { 
+	   opacity: 1; 
+	   -webkit-transform: translateX(0px) rotate(0deg); 
+	}
+}
+
+@keyframes rollIn {
+	0% { 
+	   opacity: 0.5; 
+	   transform: translateX(-500%) rotate(-540deg); 
+	}
+	100% { 
+	   opacity: 1; 
+	   transform: translateX(0px) rotate(0deg); 
+	}
+}
+.rollIn {
+	-webkit-animation-name: rollIn;
+	animation-name: rollIn;
+}
