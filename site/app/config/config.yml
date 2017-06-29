@@ -79,7 +79,7 @@ assetic:
     filters:
         cssrewrite: ~
         angular:
-            resource: '%kernel.root_dir%/../vendor/asoc/assetic-angular-js-bundle/Asoc/AsseticAngularJsBundle/Resources/config/assetic.xml'
+            resource: '%kernel.root_dir%/../vendor/miguel/assetic-angular-js-bundle/Miguel/AsseticAngularJsBundle/Resources/config/assetic.xml'
             apply_to: '\.ng$'
     assets:
         vendor_css:
