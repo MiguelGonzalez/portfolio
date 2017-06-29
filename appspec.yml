@@ -30,8 +30,7 @@ files:
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
   - source: /site/web/robots.txt
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com/web
-  - source: /site/bower.json
-    destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
+  
   - source: /site/composer.json
     destination: /var/www/vhosts/dev.miguelgonzalezgomez.com
   - source: /site/composer.lock
