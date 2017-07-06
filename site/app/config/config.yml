@@ -78,9 +78,6 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
-        angular:
-            resource: '%kernel.root_dir%/../vendor/miguel/assetic-angular-js-bundle/Miguel/AsseticAngularJsBundle/Resources/config/assetic.xml'
-            apply_to: '\.ng$'
     assets:
         vendor_css:
             inputs:
@@ -118,4 +115,6 @@ assetic:
                 
         angular_tpl:
             inputs:
-                - '@ContactBundle/Resources/views/contact.html.ng'
+                - 'assets/app/tpl/contact/contact.html'
+miguel_assetic_angular_js:
+    app_name: app

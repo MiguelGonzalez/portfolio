@@ -18,7 +18,7 @@
             {
                 url: '/',
                 config: {
-                    templateUrl: 'ContactBundle/contact.html', //'app/tpl/contact/contact.html',
+                    templateUrl: 'assets/app/tpl/contact/contact.html',
                     controller: 'ContactController',
                     controllerAs: 'vm'
                 }
