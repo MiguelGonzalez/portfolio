@@ -19,7 +19,8 @@
                 config: {
                     templateUrl: 'assets/app/tpl/skills/skills.html',
                     controller: 'SkillsController',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    title: 'skills'
                 }
             }
         ];

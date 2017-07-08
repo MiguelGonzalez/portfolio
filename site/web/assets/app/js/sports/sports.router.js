@@ -19,7 +19,8 @@
                 config: {
                     templateUrl: 'assets/app/tpl/sports/sports.html',
                     controller: 'SportsController',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    title: 'sports'
                 }
             }
         ];

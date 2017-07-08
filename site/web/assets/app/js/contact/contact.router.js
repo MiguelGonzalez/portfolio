@@ -19,7 +19,8 @@
                 config: {
                     templateUrl: 'assets/app/tpl/contact/contact.html',
                     controller: 'ContactController',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    title: 'contact'
                 }
             }
         ];

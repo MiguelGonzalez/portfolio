@@ -19,7 +19,8 @@
                 config: {
                     templateUrl: 'assets/app/tpl/education/education.html',
                     controller: 'EducationController',
-                    controllerAs: 'vm'
+                    controllerAs: 'vm',
+                    title: 'education'
                 }
             }
         ];
