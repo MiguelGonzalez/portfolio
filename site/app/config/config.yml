@@ -86,10 +86,7 @@ assetic:
                 - 'assets/vendor/font-awesome/css/font-awesome.css'
         main_css:
             inputs:
-                - 'assets/app/css/skeleton.css'
-                - 'assets/app/css/menu.css'
-                - 'assets/app/css/helpers.css'
-                - 'assets/app/css/contact.css'
+                - 'assets/app/css/*.css'
         vendor_js:
             inputs:
                 - 'assets/vendor/jquery/dist/jquery.js'
@@ -100,36 +97,31 @@ assetic:
                 - 'assets/app/js/app.module.js'
 
                 - 'assets/app/js/core/core.module.js'
-                - 'assets/app/js/core/constants.js'
-                - 'assets/app/js/core/config.js'
+                - 'assets/app/js/core/*.js'
 
                 - 'assets/app/js/blocks/router/router.module.js'
                 - 'assets/app/js/blocks/router/routerhelper.js'
 
                 - 'assets/app/js/sidebar/sidebar.module.js'
-                - 'assets/app/js/sidebar/sidebar.controller.js'
+                - 'assets/app/js/sidebar/*.js'
 
                 - 'assets/app/js/contact/contact.module.js'
-                - 'assets/app/js/contact/contact.router.js'
-                - 'assets/app/js/contact/contact.controller.js'
+                - 'assets/app/js/contact/*.js'
 
                 - 'assets/app/js/skills/skills.module.js'
-                - 'assets/app/js/skills/skills.router.js'
-                - 'assets/app/js/skills/skills.controller.js'
+                - 'assets/app/js/skills/*.js'
 
                 - 'assets/app/js/education/education.module.js'
-                - 'assets/app/js/education/education.router.js'
-                - 'assets/app/js/education/education.controller.js'
+                - 'assets/app/js/education/*.js'
                 
                 - 'assets/app/js/sports/sports.module.js'
-                - 'assets/app/js/sports/sports.router.js'
-                - 'assets/app/js/sports/sports.controller.js'
+                - 'assets/app/js/sports/*.js'
 
         angular_tpl:
             inputs:
-                - 'assets/app/tpl/contact/contact.html'
-                - 'assets/app/tpl/skills/skills.html'
-                - 'assets/app/tpl/education/education.html'
-                - 'assets/app/tpl/sports/sports.html'
+                - 'assets/app/tpl/contact/*.html'
+                - 'assets/app/tpl/skills/*.html'
+                - 'assets/app/tpl/education/*.html'
+                - 'assets/app/tpl/sports/*.html'
 miguel_assetic_angular_js:
     app_name: app
