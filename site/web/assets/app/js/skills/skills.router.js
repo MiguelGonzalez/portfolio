@@ -15,10 +15,10 @@
     function getRoutes() {
         return [
             {
-                url: '/',
+                url: '/skills',
                 config: {
-                    templateUrl: 'assets/app/tpl/contact/contact.html',
-                    controller: 'ContactController',
+                    templateUrl: 'assets/app/tpl/skills/skills.html',
+                    controller: 'SkillsController',
                     controllerAs: 'vm'
                 }
             }

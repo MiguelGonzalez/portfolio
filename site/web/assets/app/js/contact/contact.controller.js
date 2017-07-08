@@ -8,10 +8,7 @@
     ContactController.$inject = [];
 
     function ContactController() {
-
         /*jshint validthis: true */
 		var vm = this;
-
-		console.log("Contact controller");
 	}
 })();

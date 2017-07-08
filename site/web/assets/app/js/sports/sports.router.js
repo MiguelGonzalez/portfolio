@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.contact')
+        .module('app.sports')
         .run(appRun);
 
     appRun.$inject = ['routehelper'];
@@ -15,10 +15,10 @@
     function getRoutes() {
         return [
             {
-                url: '/',
+                url: '/sports',
                 config: {
-                    templateUrl: 'assets/app/tpl/contact/contact.html',
-                    controller: 'ContactController',
+                    templateUrl: 'assets/app/tpl/sports/sports.html',
+                    controller: 'SportsController',
                     controllerAs: 'vm'
                 }
             }

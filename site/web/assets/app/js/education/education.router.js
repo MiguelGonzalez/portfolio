@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.contact')
+        .module('app.education')
         .run(appRun);
 
     appRun.$inject = ['routehelper'];
@@ -15,10 +15,10 @@
     function getRoutes() {
         return [
             {
-                url: '/',
+                url: '/education',
                 config: {
-                    templateUrl: 'assets/app/tpl/contact/contact.html',
-                    controller: 'ContactController',
+                    templateUrl: 'assets/app/tpl/education/education.html',
+                    controller: 'EducationController',
                     controllerAs: 'vm'
                 }
             }
