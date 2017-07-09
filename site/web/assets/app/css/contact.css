@@ -51,7 +51,50 @@
 	   transform: translateX(0px) rotate(0deg); 
 	}
 }
+
 .rollIn {
 	-webkit-animation-name: rollIn;
 	animation-name: rollIn;
+}
+
+/* Portrait and Landscape */
+@media screen 
+  and (max-width: 768px) {
+
+  	#contact .header {
+		margin-top: 10px;
+	}
+
+  	#contact .header img {
+		width: 64px;
+		height: 64px;
+		margin: 8px;
+	}
+
+	#contact .header img:hover {
+		width: 80px;
+		height: 80px;
+	}
+
+	#contact .header h1 {
+		font-size: 4em;
+	}
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
 }
