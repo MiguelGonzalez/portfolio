@@ -22,6 +22,15 @@
                     controllerAs: 'vm',
                     title: 'sports'
                 }
+            },
+            {
+                url: '/sports/:activityName',
+                config: {
+                    templateUrl: 'assets/app/tpl/sports/statistics.html',
+                    controller: 'StatisticsController',
+                    controllerAs: 'vm',
+                    title: 'race'
+                }
             }
         ];
     }

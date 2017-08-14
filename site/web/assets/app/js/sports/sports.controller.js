@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.skills')
+        .module('app.sports')
         .controller('SportsController', SportsController);
 
     SportsController.$inject = [];

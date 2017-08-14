@@ -94,6 +94,7 @@ assetic:
                 - 'assets/vendor/jquery/dist/jquery.js'
                 - 'assets/vendor/angular/angular.min.js'
                 - 'assets/vendor/angular-route/angular-route.min.js'
+                - 'assets/vendor/ngmap/build/scripts/ng-map.min.js'
         main_js:
             inputs:
                 - 'assets/app/js/app.module.js'
