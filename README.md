@@ -36,7 +36,9 @@ bower install
 ## Fix permissions
 
 HTTPDUSER=www-data
+
 sudo setfacl -dR -m u:"$HTTPDUSER":rwX -m u:$(whoami):rwX var
+
 sudo setfacl -R -m u:"$HTTPDUSER":rwX -m u:$(whoami):rwX var
 
 # Launch assetic listener
